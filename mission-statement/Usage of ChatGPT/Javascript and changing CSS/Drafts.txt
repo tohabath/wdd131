@@ -1,0 +1,51 @@
+FIRST DRAFT
+
+document.getElementById('lightDark').addEventListener('change', function(event) {
+    var selectedOption = event.target.value;
+    console.log('Selected option:', selectedOption);
+    if (selectedOption == 'dark') {
+        document.getElementById('changer').className = 'dark';
+        document.getElementById('logo').src = 'byui-logo_white.png';
+    } else if (selectedOption == 'light') {
+        document.getElementById('changer').className = 'light';
+        document.getElementById('logo').src = 'byui-logo_blue.png';
+    }
+});
+
+SECOND DRAFT (this was the one where I couldn't figure it out)
+
+var selectedOption = document.getElementById('lightDark').target.value;
+function changeTheme() {
+    if (selectedOption == 'dark') {
+        document.getElementById('changer').className = 'dark';
+        document.getElementById('logo').src = 'byui-logo_white.png';
+    } else if (selectedOption == 'light') {
+        document.getElementById('changer').className = 'light';
+        document.getElementById('logo').src = 'byui-logo_blue.png';
+    };
+};
+document.getElementById('lightDark').addEventListener('changer', changeTheme);
+
+THIRD DRAFT
+
+    // Select the select element from the DOM
+    const themeSelector = document.getElementById('lightDark');
+    const logo = document.getElementById('logo');
+
+    // Function to change the theme
+    function changeTheme() {
+      // Check the currently selected option
+      const selectedTheme = themeSelector.value;
+
+      // Change the theme based on the selected option
+      if (selectedTheme === 'dark') {
+        document.body.className = 'dark';
+        logo.src = 'byui-logo_white.png';
+      } else {
+        document.body.className = 'light';
+        logo.src = 'byui-logo_blue.png';
+      }
+    }
+
+    // Add event listener for change event
+    themeSelector.addEventListener('change', changeTheme);
