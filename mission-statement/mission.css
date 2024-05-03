@@ -4,8 +4,8 @@ body {
     line-height: 1.5;
 }
 body.dark {
-    background-color: #181a1b;
-    color: #dbd8d4;
+    background-color: #333;
+    color: white;
 }
 body.dark h2 {
     color:#4F9ACF;
